@@ -11,5 +11,47 @@ datasource db {
 }
 
 model Default {
-  id Int @id @default(autoincrement())
+  id String @id @default(uuid())
 }
+
+model LearningPath {
+  id String @id @default(uuid())
+  name String
+  description String
+
+  categories Category[]
+}
+
+model Category {
+  id String @id @default(uuid())
+  name String
+  description String
+
+  content_description String
+
+  learning_path_id String
+  learning_path LearningPath @relation(fields: [learning_path_id], references: [id])
+
+  steps Step[]
+}
+
+model Step {
+  id String @id @default(uuid())
+  name String
+  description String
+
+  goals Goal[]
+
+  category_id String
+  category Category @relation(fields: [category_id], references: [id])
+}
+
+model Goal {
+  id String @id @default(uuid())
+  name String
+  description String
+
+  step_id String
+  step Step @relation(fields: [step_id], references: [id])
+}
+
