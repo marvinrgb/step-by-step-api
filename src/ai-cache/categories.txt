@@ -1,0 +1,103 @@
+[
+  {
+    "categoryName": "Godot Engine Fundamentals",
+    "steps": [
+      "Download and install Godot Engine",
+      "Godot Editor Interface: Understanding the UI",
+      "Creating a new Godot Project",
+      "Scene Structure: Nodes and Scenes",
+      "Understanding Node Types (Spatial, Control, Node2D, etc.)",
+      "Importing Assets (meshes, textures, sounds)",
+      "GDScript Basics: Syntax, Variables, Data Types",
+      "GDScript: Signals and Connecting Nodes",
+      "GDScript: Functions and Control Flow",
+      "GDScript: Creating and Instantiating Scenes",
+      "Using the Godot Debugger"
+    ]
+  },
+  {
+    "categoryName": "Character Movement (First Person)",
+    "steps": [
+      "Creating a KinematicBody (or CharacterBody3D in Godot 4) Node",
+      "Adding a Camera Node as a child of the KinematicBody",
+      "Implementing Basic Movement: WASD controls",
+      "Implementing Mouse Look (Rotation of Camera/Character)",
+      "Implementing Jumping",
+      "Gravity Implementation",
+      "Collision Detection and Handling (Collision Shapes)",
+      "Camera Clipping prevention with Raycasts",
+      "Optimizing Character Movement (Avoiding jitter, smooth movement)",
+      "Adding Footstep Sounds",
+      "Player Statistics (Health, Speed, Stamina)"
+    ]
+  },
+  {
+    "categoryName": "Object Interaction",
+    "steps": [
+      "Understanding Areas and Signals for Interaction",
+      "Implementing Interactable Objects (Doors, Levers, Pickups)",
+      "Using Raycasts for object detection",
+      "Creating an Interaction UI (prompt to press a button)",
+      "Picking up Items (Inventory System Basics)",
+      "Using Items (Equipping and Using)",
+      "Handling Item Properties (Damage, Healing, etc.)",
+      "Implementing Object Animations on Interaction"
+    ]
+  },
+  {
+    "categoryName": "User Interface (UI)",
+    "steps": [
+      "Creating a basic HUD (Health bar, Ammo counter)",
+      "Using Control Nodes (Labels, Buttons, TextEdit)",
+      "Anchors and Layouting",
+      "Creating Menus (Pause Menu, Inventory Menu)",
+      "Handling User Input in the UI",
+      "Styling UI Elements (Fonts, Colors, Backgrounds)",
+      "Localization (Supporting multiple languages)"
+    ]
+  },
+  {
+    "categoryName": "Game Environment and Level Design",
+    "steps": [
+      "Creating basic level geometry (using meshes or CSG nodes)",
+      "Importing Level Assets (from Blender or other 3D software)",
+      "Lighting and Shadows (Using different light types)",
+      "Post-processing Effects (Bloom, Color Correction)",
+      "Optimization Techniques (Occlusion Culling, LOD)",
+      "Adding details to the environment (Props, Particles)",
+      "Navigation Meshes for AI (if implementing AI)",
+      "Understanding Global Illumination",
+      "Terrain Generation (Basic)",
+      "Using Godot's Navigation Server for AI pathfinding"
+    ]
+  },
+  {
+    "categoryName": "Multiplayer Networking (Godot)",
+    "steps": [
+      "Understanding Network Topology (Client-Server vs. Peer-to-Peer)",
+      "Using Godot's Networking API (ENet)",
+      "Remote Procedure Calls (RPCs): Calling functions on other clients/server",
+      "Network Synchronization: Syncing variables across the network",
+      "Authoritative Server vs. Client-Side Prediction",
+      "Handling Player Connections and Disconnections",
+      "Creating a basic Lobby System",
+      "Implementing Character Synchronization (Position, Rotation, Animation)",
+      "Handling Collisions and Interactions in Multiplayer",
+      "Anti-Cheat Measures (Basic)",
+      "Optimizing Network Performance"
+    ]
+  },
+  {
+    "categoryName": "Advanced Topics and Polish",
+    "steps": [
+      "AI (Basic Enemy AI)",
+      "AnimationStateMachine",
+      "State Machines for Game Logic",
+      "Saving and Loading Game Data",
+      "Sound Design (Adding sound effects and music)",
+      "Visual Effects (Particle Systems, Shaders)",
+      "Optimization Techniques (Profiling, Memory Management)",
+      "Packaging and Exporting the Game"
+    ]
+  }
+]

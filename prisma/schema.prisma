@@ -10,10 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Default {
-  id String @id @default(uuid())
-}
-
 model LearningPath {
   id String @id @default(uuid())
   name String

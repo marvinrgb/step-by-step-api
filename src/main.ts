@@ -22,8 +22,10 @@ app.use((req,res,next) => {
 })
 
 // forwards all requests under /api to the routeManager, wich distributes them further
-app.use('/api', RouteManager);
+import { getGeminiResponse } from './gemini-ai-handler';
 
+
+app.use('/api', RouteManager);
 // starts the server under the specified port
 app.listen(port, () => {
   console.log(`api running on port ${port}`);
