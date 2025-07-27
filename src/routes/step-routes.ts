@@ -34,6 +34,12 @@ router.get('/:id', async (req: Request, res: Response) => {
     const { id } = req.params;
     const step = await prisma.step.findUnique({
       where: { id },
+      select: {
+        name: true,
+        description: true,
+        id: true,
+        goals: true
+      }
     });
     if (!step) {
       return res.status(404).json({ error: 'Step not found' });

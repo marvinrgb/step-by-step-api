@@ -43,6 +43,12 @@ router.get('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         const { id } = req.params;
         const step = yield prisma.step.findUnique({
             where: { id },
+            select: {
+                name: true,
+                description: true,
+                id: true,
+                goals: true
+            }
         });
         if (!step) {
             return res.status(404).json({ error: 'Step not found' });

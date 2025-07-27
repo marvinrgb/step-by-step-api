@@ -1,0 +1,113 @@
+openapi: 3.0.0
+info:
+  title: Step-by-Step API
+  version: 1.0.0
+paths:
+  /learning-paths:
+    get:
+      summary: Get all learning paths
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new learning path
+      responses:
+        '200':
+          description: Successful operation
+  /learning-paths/{id}:
+    get:
+      summary: Get a learning path by ID
+      responses:
+        '200':
+          description: Successful operation
+    put:
+      summary: Update a learning path by ID
+      responses:
+        '200':
+          description: Successful operation
+    delete:
+      summary: Delete a learning path by ID
+      responses:
+        '200':
+          description: Successful operation
+  /categories:
+    get:
+      summary: Get all categories
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new category
+      responses:
+        '200':
+          description: Successful operation
+  /categories/{id}:
+    get:
+      summary: Get a category by ID
+      responses:
+        '200':
+          description: Successful operation
+    put:
+      summary: Update a category by ID
+      responses:
+        '200':
+          description: Successful operation
+    delete:
+      summary: Delete a category by ID
+      responses:
+        '200':
+          description: Successful operation
+  /steps:
+    get:
+      summary: Get all steps
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new step
+      responses:
+        '200':
+          description: Successful operation
+  /steps/{id}:
+    get:
+      summary: Get a step by ID
+      responses:
+        '200':
+          description: Successful operation
+    put:
+      summary: Update a step by ID
+      responses:
+        '200':
+          description: Successful operation
+    delete:
+      summary: Delete a step by ID
+      responses:
+        '200':
+          description: Successful operation
+  /goals:
+    get:
+      summary: Get all goals
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Create a new goal
+      responses:
+        '200':
+          description: Successful operation
+  /goals/{id}:
+    get:
+      summary: Get a goal by ID
+      responses:
+        '200':
+          description: Successful operation
+    put:
+      summary: Update a goal by ID
+      responses:
+        '200':
+          description: Successful operation
+    delete:
+      summary: Delete a goal by ID
+      responses:
+        '200':
+          description: Successful operation

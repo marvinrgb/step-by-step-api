@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getGeminiResponse = void 0;
+exports.parseGeminiJson = exports.getGeminiResponse = void 0;
 // src/gemini-ai-handler.ts
 const axios_1 = __importDefault(require("axios"));
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -20,7 +20,7 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/
 function getGeminiResponse(text) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log(`GEMINI_API_KEY: ${GEMINI_API_KEY}`);
+            // console.log(`GEMINI_API_KEY: ${GEMINI_API_KEY}`)
             if (!GEMINI_API_KEY) {
                 console.error('GEMINI_API_KEY is not set. Please set it in your environment variables.');
                 return null;
@@ -34,7 +34,7 @@ function getGeminiResponse(text) {
             });
             console.log(`Calling Gemini API with URL: ${GEMINI_API_URL}?key=${GEMINI_API_KEY}`);
             console.log(response);
-            const geminiResponse = response.data;
+            const geminiResponse = yield response.data;
             if (geminiResponse.candidates && geminiResponse.candidates.length > 0) {
                 const aiText = geminiResponse.candidates[0].content.parts[0].text;
                 return aiText;
@@ -57,3 +57,4 @@ function parseGeminiJson(jsonstring) {
     jsonstring = jsonstring.replace("```", "");
     return JSON.parse(jsonstring);
 }
+exports.parseGeminiJson = parseGeminiJson;

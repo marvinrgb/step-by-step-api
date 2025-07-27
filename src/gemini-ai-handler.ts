@@ -11,7 +11,7 @@ interface GeminiResponse {
 
 export async function getGeminiResponse(text: string): Promise<string | null> {
     try {
-        console.log(`GEMINI_API_KEY: ${GEMINI_API_KEY}`)
+        // console.log(`GEMINI_API_KEY: ${GEMINI_API_KEY}`)
         if (!GEMINI_API_KEY) {
             console.error('GEMINI_API_KEY is not set. Please set it in your environment variables.');
             return null;
@@ -30,7 +30,7 @@ export async function getGeminiResponse(text: string): Promise<string | null> {
         );
         console.log(`Calling Gemini API with URL: ${GEMINI_API_URL}?key=${GEMINI_API_KEY}`);
         console.log(response)
-        const geminiResponse: GeminiResponse = response.data;
+        const geminiResponse: GeminiResponse = await response.data;
 
         if (geminiResponse.candidates && geminiResponse.candidates.length > 0) {
             const aiText = geminiResponse.candidates[0].content.parts[0].text;
@@ -46,7 +46,7 @@ export async function getGeminiResponse(text: string): Promise<string | null> {
     }
 }
 
-function parseGeminiJson(jsonstring: string) {
+export function parseGeminiJson(jsonstring: string) {
     jsonstring = jsonstring.replace("```json", "");
     jsonstring = jsonstring.replace("```", "");
     return JSON.parse(jsonstring);
