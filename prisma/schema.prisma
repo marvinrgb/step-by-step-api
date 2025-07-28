@@ -14,6 +14,7 @@ model LearningPath {
   id String @id @default(uuid())
   name String
   description String
+  budged_type String @default("normal")
 
   categories Category[]
 }
